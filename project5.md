@@ -70,6 +70,26 @@ I opened the vim file and replace ‘127.0.0.1’ to ‘0.0.0.0’ as shown belo
 ![Bind Address](./images/bind_address.PNG "Bind Address")
 
 
+Next, I restarted mysql service by running the command below:
+
+`sudo systemctl restart mysql`
 
 
+Next, mysql utility, from mysql client Linux Server I connected remotely to mysql server Database Engine without using SSH by running this command:
 
+`sudo mysql -u remote_user -h 172.31.27.230 -p`
+
+The output is shown below:
+
+![](./images/connection.PNG)
+
+
+Finally, I ran the command bewlow on the mysql console to show databases
+
+`Show databases;`
+
+The output is displayed below:
+
+![](./images/database.PNG)
+
+This is the end of project 5
