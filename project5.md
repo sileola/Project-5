@@ -17,10 +17,25 @@ Next, on the mysql **SERVER** instance, I updated my packages, installed **mysql
 
 `sudo systemctl enable mysql`
 
-Next, on the mysql **CLIENT** instance, I updated my packages, installed **mysql-client** and enabled the server by running the following commands:
+Next, on the mysql **CLIENT** instance, I updated my packages and installed **mysql-client**  by running the following commands:
 
 `sudo apt update -y`
 
 `sudo apt install mysql-client -y`
 
-`sudo systemctl enable mysql`
+Next, I opened up port 3306 on the mysql-server security group and I restricted traffic to the ip address of the mysql-client, as shown below
+
+
+![](./images/port3306_mysql_server.PNG)
+
+
+Next, on the server instance, I ran the command below:
+
+`sudo mysql_secure_installation` and I completed the installation
+
+Next, I ran the command below
+
+`sudo mysql`
+
+![](./images/mysql.PNG)
+
